@@ -1,0 +1,97 @@
+Microsoft Windows [Version 10.0.22631.3447]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\USER>ssh muha23285ti@kreasi.nurulfikri.ac.id
+The authenticity of host 'kreasi.nurulfikri.ac.id (134.209.217.226)' can't be established.
+ED25519 key fingerprint is SHA256:71sSdDNi4mOVrYjrD/EB4O8Vd9zUl2aC06QKanSElDI.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'kreasi.nurulfikri.ac.id' (ED25519) to the list of known hosts.
+muha23285ti@kreasi.nurulfikri.ac.id's password:
+Permission denied, please try again.
+muha23285ti@kreasi.nurulfikri.ac.id's password:
+Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 5.4.0-173-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+  System information as of Fri May 10 17:38:24 WIB 2024
+
+  System load:                      0.05
+  Usage of /home:                   76.3% of 499.76GB
+  Memory usage:                     44%
+  Swap usage:                       0%
+  Processes:                        884
+  Users logged in:                  34
+  IPv4 address for br-6ee10becb9b6: 172.27.27.6
+  IPv4 address for br-d9a348bd9722: 172.21.0.1
+  IPv4 address for docker0:         172.17.0.1
+  IPv4 address for eth0:            134.209.217.226
+  IPv4 address for eth0:            10.10.0.5
+  IPv6 address for eth0:            2604:a880:400:d0::220e:9001
+  IPv4 address for eth1:            10.116.0.2
+
+Expanded Security Maintenance for Applications is not enabled.
+
+125 updates can be applied immediately.
+48 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+14 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+New release '22.04.3 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+muha23285ti@kreasi:~$ cd public_html
+muha23285ti@kreasi:~/public_html$ ls
+'Projek UTS'  'Sistem Informasi Pegawai - Project PW Kelompok 2'   projek1
+muha23285ti@kreasi:~/public_html$ cd Projek UTS
+-bash: cd: too many arguments
+muha23285ti@kreasi:~/public_html$ cd Projek UTS
+-bash: cd: too many arguments
+muha23285ti@kreasi:~/public_html$ cd Projek UTS
+-bash: cd: too many arguments
+muha23285ti@kreasi:~/public_html$ ls
+ Projek_UTS  'Sistem Informasi Pegawai - Project PW Kelompok 2'   projek1
+muha23285ti@kreasi:~/public_html$ cd Projek_UTS
+muha23285ti@kreasi:~/public_html/Projek_UTS$ mysql -u muha23285ti -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 93100
+Server version: 8.0.36-0ubuntu0.20.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| db_muha23285ti     |
+| information_schema |
+| performance_schema |
++--------------------+
+3 rows in set (0.03 sec)
+
+mysql> exit;
+Bye
+muha23285ti@kreasi:~/public_html/Projek_UTS$ mysql -u muha23285ti -p db_muha23285ti < db_puskesmas(1).sql
+-bash: syntax error near unexpected token `('
+muha23285ti@kreasi:~/public_html/Projek_UTS$ mysql -u muha23285ti -p db_muha23285ti < db_puskesmas.sql
+-bash: db_puskesmas.sql: No such file or directory
+muha23285ti@kreasi:~/public_html/Projek_UTS$ mysql -u muha23285ti -p db_muha23285ti < db_puskesmas.sql
+-bash: db_puskesmas.sql: No such file or directory
+muha23285ti@kreasi:~/public_html/Projek_UTS$ ls
+admin
+muha23285ti@kreasi:~/public_html/Projek_UTS$ cd admin
+muha23285ti@kreasi:~/public_html/Projek_UTS/admin$ mysql -u muha23285ti -p db_muha23285ti < db_puskesmas.sql
+Enter password:
+muha23285ti@kreasi:~/public_html/Projek_UTS/admin$ client_loop: send disconnect: Connection reset
