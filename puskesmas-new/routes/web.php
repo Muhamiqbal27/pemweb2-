@@ -48,3 +48,9 @@ Route::get('/about',[AboutController::class, 'index']);
 //Praktikum Laravel 3
 Route::get('/dashboard/kelurahan',[KelurahanController::class, 'index']);
 Route::get('/dashboard/pasien',[PasienController::class, 'index']);
+
+//Praktikum Laravel 4
+Route::get('/dashboard/kelurahan/create',[KelurahanController::class, 'create']);
+Route::post('/dashboard/kelurahan/store',[KelurahanController::class, 'store']);
+Route::get('/dashboard/kelurahan/show/{id}',[KelurahanController::class, 'show']);
+
