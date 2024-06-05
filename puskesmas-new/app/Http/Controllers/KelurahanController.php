@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Kelurahan;
+use App\Models\Kelurahan; 
 
 class KelurahanController extends Controller
 {
