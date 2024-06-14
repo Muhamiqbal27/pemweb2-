@@ -59,7 +59,8 @@ class PasienController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $pasien = Pasien::find($id);
+        return view('admin.pasien.edit', compact('pasien'));
     }
 
     /**
@@ -67,7 +68,11 @@ class PasienController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+         // validasi form input
+         $validated = $request->validate([
+            'nama' => 'required|string',
+            'kecamatan_nama' => 'required|string'
+        ]);
     }
 
     /**
